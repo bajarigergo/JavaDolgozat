@@ -1,20 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package main;
 
-/**
- *
- * @author bajari.gergo
- */
+import controller.CuiVezerlo;
+import modell.Ember;
+import view.CuiNezet;
+
 public class JavaDolgozat {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Ember ember = new Ember("Béla", 22);
+        CuiNezet nezet = new CuiNezet();
+        CuiVezerlo cuiVezerlo = new CuiVezerlo(ember, nezet);
+        
+        cuiVezerlo.start();
+        cuiVezerlo.nyelvetTanult();
+        cuiVezerlo.szuletesnapjaVolt();
     }
     
 }
